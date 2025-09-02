@@ -646,4 +646,14 @@ async function generatePPTX() {
     
   } catch (error) {
     console.error('Erro na geração:', error);
-    addLog('Erro ao gerar arquivo:
+    addLog('Erro ao gerar arquivo: ' + error.message, 'error');
+    showStatusMessage('Erro ao gerar arquivo: ' + error.message, 'error');
+  }
+  
+  setTimeout(() => {
+    progressDiv.classList.add('hidden');
+  }, 3000);
+}
+</script>
+</body>
+</html>
